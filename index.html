@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <header>
+    <h1> Agrinho 2026</h1>
+    <p>Tecnologia e sustentabilidade andando juntas.</p>
+</header>
 
+<section class="sobre">
+    <h2>Sobre o projeto</h2>
+    <p>Este projeto mostra como a tecnologia pode ajudar o produtor rural a economizar água e cuidar melhor da plantação, contribuindo para um futuro mais sustentável.</p>
+</section>
+
+<section class="ferramenta">
+    <h2>Calculadora de Economia de Água</h2>
+    <p>Digite o tamanho da sua plantação e veja uma estimativa de quanta água pode ser economizada.</p>
+
+    <div class="formulario">
+        <label for="area">Área da plantação (m2):</label>
+        <input type="number" id="area" placeholder="Ex.: 150">
+        <button onclick="calcularAgua()">Ver resultado</button>
+    </div>
+
+    <div id="resultado" class="resultado-oculto"></div>
+</section>resultadoDiv.innerHTML = `
+    <h3> Resultado</h3>
+    <p>Para uma área de <strong>${area} m2</strong>, a economia estimada é de aproximadamente <strong>${aguaEconomizada} litros de água</strong> por ciclo de irrigação.</p>
+    <p> Pequenas atitudes fazem uma grande diferença para o meio ambiente!</p>
+`;resultadoDiv.innerHTML = "<strong>Digite uma área válida para fazer o cálculo.</strong>";
 
 
 
