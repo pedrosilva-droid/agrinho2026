@@ -29,6 +29,53 @@
     
     <p> Pequenas atitudes fazem uma grande diferença para o meio ambiente!</p>
 ;resultadoDiv.innerHTML = "<strong>Digite uma área válida para fazer o cálculo.</strong>";
+<p>A importancia do calculo da àgua do agro e muito importante para nâo passar o limite de água na planta e nao ocorre gasto dela</p>
+### 💧 Tabela de Medição e Necessidade de Água para Plantas
+
+| Planta | Tipo de Solo | Umidade Ideal (%) | Frequência de Rega | Quantidade de Água | Observações |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Cacto** | Arenoso / Drenado | $10 - 20\%$ | A cada 15 - 20 dias | $50 \text{ ml}$ | Deixe o solo secar totalmente entre as regas. |
+| **Samambaia** | Rico em matéria orgânica | $60 - 80\%$ | A cada 2 - 3 dias | $200 \text{ ml}$ | Mantenha o solo sempre úmido, mas não encharcado. |
+| **Jiboia** | Substrato universal | $40 - 50\%$ | A cada 5 - 7 dias | $100 \text{ ml}$ | Regue quando os primeiros $2 \text{ cm}$ de terra estiverem secos. |
+| **Zamioculca** | Bem drenável | $20 - 30\%$ | A cada 10 - 15 dias | $80 \text{ ml}$ | Evite excesso de água; muito resistente à seca. |
+| **Lírio da Paz** | Turfa e húmus | $60 - 70\%$ | A cada 3 - 4 dias | $150 \text{ ml}$ | As folhas caem levemente quando precisam de água. |
+ <p>As abelha a importamcia delas </p>
+ <p>As abelhas são vitais para o planeta, pois atuam como os principais polinizadores da natureza. Elas garantem a reprodução de grande parte das flores e plantas, o que sustenta a biodiversidade, a produção de alimentos e a economia global.Sua importância se divide em duas áreas fundamentais:Para as Flores e a BiodiversidadeReprodução Vegetal: Ao coletar néctar e pólen, as abelhas transportam o pólen de uma flor para outra. Esse processo de polinização fertiliza as plantas, permitindo a produção de sementes e novos frutos.Manutenção dos Ecossistemas: Cerca de 80% das plantas com flores dependem de polinizadores para sobreviver e se multiplicar. Sem as abelhas, muitas espécies vegetais entrariam em extinção, afetando toda a cadeia alimentar.Para o Equilíbrio da Sociedade e EconomiaSegurança Alimentar: Mais de 30% dos alimentos que consumimos dependem diretamente da polinização feita pelas abelhas, incluindo frutas, legumes e castanhas.Impacto Econômico: A atividade é um pilar da agricultura. Culturas como café, maçã, amêndoa e soja dependem fortemente desses insetos, gerando bilhões de dólares em valor comercial e garantindo milhões de empregos no setor agrícola.Indústria de Mel e Derivados: Além do papel ecológico, a apicultura produz mel, própolis, geleia real e cera, movimentando a economia local e oferecendo produtos com propriedades medicinais e nutricionais.</p>
+ class Abelha:
+    def __init__(self, nome, idade, polinizadora=True):
+        self.nome = nome
+        self.idade = idade  # em dias
+        self.polinizadora = polinizadora
+
+class Colmeia:
+    def __init__(self):
+        self.abelhas = []
+
+    def adicionar_abelha(self, abelha):
+        self.abelhas.append(abelha)
+
+    def total_abelhas(self):
+        return len(self.abelhas)
+
+    def total_polinizadoras(self):
+        return sum(1 for a in self.abelhas if a.polinizadora)
+
+    def exibir_info(self):
+        print(f"Total de abelhas na colmeia: {self.total_abelhas()}")
+        print(f"Abelhas polinizadoras: {self.total_polinizadoras()}")
+        print("\nDetalhes das Abelhas:")
+        for a in self.abelhas:
+            status_polen = "Sim" if a.polinizadora else "Não"
+            print(f"- Nome: {a.nome} | Idade: {a.idade} dias | Polinizadora: {status_polen}")
+
+# Simulação
+colmeia_do_campus = Colmeia()
+colmeia_do_campus.adicionar_abelha(Abelha("Maya", 15))
+colmeia_do_campus.adicionar_abelha(Abelha("Zizi", 22))
+colmeia_do_campus.adicionar_abelha(Abelha("Bzz", 5, polinizadora=False)) # Abelha jovem, ainda não coleta pólen
+
+colmeia_do_campus.exibir_info()
+
 
 
 </html>
